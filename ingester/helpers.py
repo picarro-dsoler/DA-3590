@@ -365,4 +365,9 @@ def parse_args(args=None):
                             "Specify the number of days prior to today to include in GET request. "
                             "More than 13 usually causes the remote connection to close before completing request. "
                             "Default is 12."))
+    parser.add_argument('--start_date', '-s',
+                        default=datetime.now().strftime('%Y-%m-%d'), type=str,
+                        help=(
+                            "Specify the start date to include in GET request. "
+                            "Default is today."))
     return parser.parse_args(args)

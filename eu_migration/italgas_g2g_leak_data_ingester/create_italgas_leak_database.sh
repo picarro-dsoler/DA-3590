@@ -39,12 +39,17 @@ accertamentoRiscontrato TEXT,
 descrizioneAsset TEXT,
 sedeTecnicaLocalizzata TEXT,
 dataUltimaMod INTEGER,
-picarroLastUpdated INTEGER,
-idAzienda INTEGER
+picarroLastUpdated INTEGER
 );"
 
 # change directory back to the original
 cd $MY_CWD || exit
 
+# create cronjob to run every 8 hours (or 3x/day)
+crontab -l | {
+  /bin/cat
+  /bin/echo "45 3,11,19 * * * . /home/ubuntu/anaconda3/envs/picarro3/etc/conda/activate.d/italgas-leak-ingester-activate.sh ; /home/ubuntu/anaconda3/envs/picarro3/bin/python $MY_CWD/src_italgas_leak_ingester/main.py"
+} | crontab -
 
+# clean exit
 exit
