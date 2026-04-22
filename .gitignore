@@ -1,0 +1,14 @@
+*.db
+*.log
+*.csv
+*.json
+*.txt
+*.xml
+*.html
+*.css
+*.js
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
