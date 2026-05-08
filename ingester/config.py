@@ -3,7 +3,7 @@ import os
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 
 LOGS_PATH = os.path.abspath(os.path.join(DIR_PATH, '..', 'database/logs'))
-DATABASE_PATH = os.path.abspath(os.path.join(DIR_PATH, '..', 'database/italgas_g2g.db'))
+DATABASE_PATH = os.path.abspath(os.path.join(DIR_PATH, '..', 'database/italgas_g2g_anders.db'))
 
 LOGGING_CONFIG = {
     'version': 1,
